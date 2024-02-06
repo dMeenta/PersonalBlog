@@ -1,0 +1,11 @@
+<%- include("partials/header.ejs") %>
+    <%- include("partials/aside.ejs") %>
+        <main>
+            <form action="/submit" method="POST">
+                <input class="txt_input" type="text" name="pTitle" placeholder="Título">
+                <textarea class="txt_input" name="pContent"
+                    placeholder="Escribe lo que quieres compartir..."></textarea>
+                <input class="primary btn hov" type="submit" value="Crear">
+            </form>
+        </main>
+        <%- include("partials/footer.ejs") %>

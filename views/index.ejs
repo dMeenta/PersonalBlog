@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") %>
+    <%- include("partials/aside.ejs") %>
+        <main>
+            <% if (locals.array.length!==0) { %>
+                <ul>
+                    <% array.forEach(element=> { %>
+                        <li>
+                            <a href="/<%=element %>">
+                                <%= element %>
+                            </a>
+                        </li>
+                        <% }); %>
+                </ul>
+                <% } else { %>
+                    <h2 class="fs ft-lt">Oops! Aún no hay POSTS para mostrar</h2>
+                    <a class="btn hov" href="/crear-post">Crea uno Aquí</a>
+                    <% } %>
+        </main>
+        <%- include("partials/footer.ejs") %>
